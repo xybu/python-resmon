@@ -6,6 +6,10 @@ python-resmon
 A resource monitor that records resource usage (e.g., CPU usage, RAM usage and free, disk I/O
 count, NIC speed, etc.) and outputs the data in CSV format that is easy to post-process.
 
+Compared to collecting and parsing the output of `top` and `atop`, this script incurs less overhead and the
+CSV output is much easier to parse, making it handy for experiments that need resource monitoring
+and processing of the generated data sets.
+
 The script is written in Python 3 syntax and depends on [psutil](https://github.com/giampaolo/psutil).
 
 # Installation
