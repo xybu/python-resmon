@@ -1,18 +1,18 @@
- python-resmon
- =============
+python-resmon
+=============
 
 # Intro
 
 A resource monitor that records resource usage (e.g., CPU usage, RAM usage and free, disk I/O
 count, NIC speed, etc.) and outputs the data in CSV format that is easy to post-process.
 
-The script is written in Python 3 and depends on (psutil)[https://github.com/giampaolo/psutil].
+The script is written in Python 3 syntax and depends on [psutil](https://github.com/giampaolo/psutil).
 
 # Installation
 
 First make sure Python 3 interpreter and `pip` are installed.
 
-```
+```bash
 # Install python3-dev on ubuntu because a dependency requires Python.h.
 $ sudo apt install python3-dev
 
@@ -22,7 +22,7 @@ $ wget -O- https://bootstrap.pypa.io/get-pip.py | sudo python3
 
 To install from repository,
 
-```
+```bash
 # Grab source code.
 $ git clone git@github.com:xybu/python-resmon.git
 $ cd python-resmon
@@ -38,7 +38,7 @@ $ ./setup.py install --user
 
 After installing, try with command `resmon --help` for more info:
 
-```
+```bash
 xb@precision:[~/projects/python-resmon]: resmon --help
 usage: resmon [-h] --delay DELAY [--flush [FLUSH]] [--outfile [OUTFILE]]
               [--nic [NIC]] [--nic-outfile [NIC_OUTFILE]] [--enable-ps]
@@ -129,3 +129,7 @@ Timestamp, Uptime, %CPU, %MEM, io.read, io.read.KB, io.write, io.write.KB, mem.r
 1475022359, 20, 172.6, 17.943, 20149, 183840, 12005, 1300, 736356, 12022, 16
 ...
 ```
+
+# Support
+
+Contribute to the code base or report bugs by committing to the repository (https://github.com/xybu/python-resmon) or creating issues.
