@@ -78,7 +78,7 @@ optional arguments:
 
 # Example
 
-Sample output of resource monitor:
+Sample output of resource monitor (note that the operation of obtaining statistics is not atomic -- there is time difference between obtaining sets of numbers; therefore a sum value (e.g., `%CPU` below) may not equal the sum of individual values (e.g., `%CPUx`)):
 
 ```
 Timestamp,  Uptime, NCPU, %CPU, %CPU0, %CPU1, %CPU2, %CPU3, %MEM, mem.total.KB, mem.used.KB, mem.avail.KB, mem.free.KB, %SWAP, swap.total.KB, swap.used.KB, swap.free.KB, io.read, io.write, io.read.KB, io.write.KB, io.read.ms, io.write.ms
