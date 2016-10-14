@@ -1,1 +1,3 @@
-psutil 
+setuptools
+pip
+psutil
