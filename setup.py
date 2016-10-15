@@ -28,7 +28,7 @@ with open('requirements.txt', 'r') as f:
 
 setup(
     name='python-resmon',
-    version='1.0',
+    version='1.0.1',
     author='Xiangyu Bu',
     author_email='xybu92@live.com',
     license='MIT License',

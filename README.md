@@ -45,6 +45,14 @@ $ pip install -r requirements.txt # might need sudo
 $ ./setup.py install --user
 ```
 
+# Uninstallation
+
+To uninstall the package,
+
+```bash
+$ pip uninstall python-resmon
+```
+
 # Usage
 
 After installing, try with command `resmon --help` for more info:
