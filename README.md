@@ -24,7 +24,14 @@ $ sudo apt install python3-dev
 $ wget -O- https://bootstrap.pypa.io/get-pip.py | sudo python3
 ```
 
-To install from repository,
+Use `pip` to pull the repository and install:
+
+```bash
+# Install to user space. Remove "--user" to install system-wide.
+$ pip install --user git+ssh://git@github.com/xybu/python-resmon.git
+```
+
+Or install from repository manually,
 
 ```bash
 # Grab source code.
@@ -79,6 +86,8 @@ optional arguments:
                         Name of the process monitor output file. Default:
                         "psstat.csv".
 ```
+
+To terminate the monitor, send `SIGINT` signal to the process.
 
 # Example
 
