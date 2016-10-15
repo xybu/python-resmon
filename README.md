@@ -51,7 +51,7 @@ After installing, try with command `resmon --help` for more info:
 
 ```bash
 xb@precision:[~/projects/python-resmon]: resmon --help
-usage: resmon [-h] --delay DELAY [--flush [FLUSH]] [--outfile [OUTFILE]]
+usage: resmon [-h] [--delay DELAY] [--flush] [--outfile [OUTFILE]]
               [--nic [NIC]] [--nic-outfile [NIC_OUTFILE]] [--enable-ps]
               [--ps-keywords [PS_KEYWORDS [PS_KEYWORDS ...]]]
               [--ps-pids [PS_PIDS [PS_PIDS ...]]] [--ps-outfile [PS_OUTFILE]]
@@ -63,8 +63,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --delay DELAY, -d DELAY
                         Interval, in sec, to poll information.
-  --flush [FLUSH], -f [FLUSH]
-                        If set True, flush the output files after each line is
+  --flush, -f           If present, flush the output files after each line is
                         written.
   --outfile [OUTFILE], -o [OUTFILE]
                         Name of system monitor output file. If unset, print to

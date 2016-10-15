@@ -249,10 +249,9 @@ def chprio(prio):
 def main():
     parser = argparse.ArgumentParser(
         description='Monitor system-wide resource availability. Optionally monitor processes that match the specified criteria and their children.')
-    parser.add_argument('--delay', '-d', type=int, default=4,
-                        required=True, help='Interval, in sec, to poll information.')
-    parser.add_argument('--flush', '-f', type=bool, nargs='?', default=False,
-                        help='If set True, flush the output files after each line is written.')
+    parser.add_argument('--delay', '-d', type=int, default=1, help='Interval, in sec, to poll information.')
+    parser.add_argument('--flush', '-f', default=False, action='store_true',
+                        help='If present, flush the output files after each line is written.')
     parser.add_argument('--outfile', '-o', type=str, nargs='?', default=None,
                         required=False, help='Name of system monitor output file. If unset, print to stdout.')
     parser.add_argument('--nic', '-n', type=str, nargs='?', default=None, required=False,
