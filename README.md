@@ -94,7 +94,7 @@ optional arguments:
                         "psstat.csv".
 ```
 
-To terminate the monitor, send `SIGINT` signal to the process.
+To terminate the monitor, send `SIGINT` or `SIGTERM` signal to the process.
 
 # Example
 

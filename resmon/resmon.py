@@ -18,8 +18,8 @@ For example, if keyword "docker" is given, then it reports, every T seconds, the
 import argparse
 import os
 import sched
+import signal
 import sys
-import threading
 import time
 import psutil
 
@@ -246,6 +246,10 @@ def chprio(prio):
         print('Warning: failed to elevate priority!', file=sys.stderr)
 
 
+def sigterm(signum, frame):
+    raise KeyboardInterrupt()
+
+
 def main():
     parser = argparse.ArgumentParser(
         description='Monitor system-wide resource availability. Optionally monitor processes that match the specified criteria and their children.')
@@ -280,6 +284,8 @@ def main():
     else:
         # Convert to lowercase to achieve case IN-sensitiveness.
         args.ps_keywords = [k.lower() for k in args.ps_keywords]
+
+    signal.signal(signal.SIGTERM, sigterm)
 
     try:
         chprio(-20)
